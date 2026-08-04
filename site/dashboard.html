@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RMMIS — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="mark-sm">R</span> RMMIS</div>
+  <div class="who">
+    <span id="whoName">Loading...</span>
+    <span class="role-tag" id="roleTag">—</span>
+    <button class="btn btn-ghost btn-sm" id="logoutBtn">Sign out</button>
+  </div>
+</div>
+
+<div class="layout">
+  <div class="tabs" id="tabsNav"></div>
+  <div class="content" id="content">
+    <div class="empty-state">Loading your dashboard...</div>
+  </div>
+</div>
+
+<!-- Forced password reset modal -->
+<div class="modal-backdrop hidden" id="pwModal">
+  <div class="modal">
+    <h3>Set a new password</h3>
+    <p class="card-sub">For security, choose a new password before continuing. This replaces the temporary one you were given.</p>
+    <div id="pwError" class="error-msg hidden"></div>
+    <label for="newPw">New password</label>
+    <input type="password" id="newPw" minlength="8" placeholder="At least 8 characters" />
+    <label for="confirmPw">Confirm new password</label>
+    <input type="password" id="confirmPw" minlength="8" placeholder="Re-enter password" />
+    <button class="btn btn-primary btn-block" id="savePwBtn">Save password</button>
+  </div>
+</div>
+
+<div id="toastHost"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

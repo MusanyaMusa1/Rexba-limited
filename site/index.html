@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RMMIS — Sign in</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="login-shell">
+  <div class="login-brand">
+    <div class="mark">R</div>
+    <h1>RMMIS</h1>
+    <p>Rexba Market Management Information System — vendor registration, stalls, and payments, in one place.</p>
+  </div>
+
+  <div class="login-form-wrap">
+    <form class="login-form" id="loginForm">
+      <h2>Sign in</h2>
+      <p class="sub">Use your registered phone number and password.</p>
+
+      <div id="errorBox" class="error-msg hidden"></div>
+
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" placeholder="07XXXXXXXX" autocomplete="username" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" required />
+
+      <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Sign in</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
